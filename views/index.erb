@@ -1,0 +1,17 @@
+<h1> 트위터세상</h1>
+<form action= "/create"> 
+    <!--% unless session[:email]%>-->
+    <!--이름: input type= "text" name= "name"><br>-->
+    <!--<!- % end %>-->-->
+    <input type= "hidden" name="name" value="<%= session[:email]%>">
+    트윗: <input type= "text" name= "content"><br>
+    <input type= "submit">
+</form> 
+
+<% @tweet.each do |t| %>
+이름: <%= t.name %> <br>
+트윗: <%= t.content %> <br>
+<% end %>
+
+
+

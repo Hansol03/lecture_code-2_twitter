@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 트위터 세상</title>
+        <meta charset="uta-8"> </meta>
+    </head>
+    <body> 
+    <a href= "/">홈으로</a>
+    <% if session[:email] %>
+        <%= session[:email] %>님 환영합니다! 
+        <a href= "/logout">로그아웃</a>
+        <% else %>
+            <a href= "/signup">회원가입</a>
+            <a href= "/login">로그인</a>
+        <% end %>
+    
+    
+    <%= yield %>
+    </body>
+</html>

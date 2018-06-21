@@ -1,0 +1,5 @@
+<h1>모든유저 : <%=@total %></h1>
+<% @user.each do |u| %>
+이메일: <%= u.email %> <br>
+비번: <%= u.password %> <br>
+<% end %>
